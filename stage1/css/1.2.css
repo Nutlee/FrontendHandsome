@@ -98,6 +98,7 @@ header ul a {
 	margin-left: 30%;
 }
 .page-form input[type='submit'] {
+	display: block;
 	margin: 0 auto;
 	width: 95%;
 	height: 50px;
