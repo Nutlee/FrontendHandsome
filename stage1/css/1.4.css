@@ -60,7 +60,7 @@ p {
 .container1 {
 	display: table;
 	position: static;
-	height: 900px;
+	height: 1200px;
 	margin: 0 auto;
 }
 .container-table {
@@ -78,8 +78,7 @@ p {
   */
 
 .container2 {
-	height: 900px;
-	margin-bottom: 50px;
+	height: 1200px;
 	text-align: center;
 }
 .container-center2 {
@@ -98,7 +97,7 @@ p {
  * 用 after before 伪类构造标签
  */
 .container3 {
-	height: 900px;
+	height: 1200px;
 	text-align: center;
 	/*overflow: auto;*/
 }
