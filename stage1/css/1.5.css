@@ -1,0 +1,171 @@
+html {
+	height: 100%;
+}
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	background-color: #DEDEDE;
+}
+header {
+	position: relative;
+	height: 90px;
+	width: 100%;
+	background-color: #333;
+}
+header img {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	margin-top: -22px;
+	height: 43px;
+	width: 90px;
+}
+header ul {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	padding: 0;
+	margin-top: -0.5em; 
+}
+header ul li {
+	float: left;
+	margin-left: 5px;
+	list-style: inside;
+	/* 保证撑开li */
+	min-width: 100px;
+}
+header ul a {
+	color: #FFF;
+	text-decoration: none;
+}
+.container-center {
+	position:relative;
+	padding-bottom: 50px;
+}
+.page-parent {
+	float: left;
+	margin-right: 474px;
+}
+.page {
+	margin: 15px;
+	padding: 20px;
+	border: 2px solid #ccc;
+	box-shadow: 1px 1px 5px #BBB;
+	background-color: #FFF;
+}
+.page-h-2,.page-author {
+	color: #777;
+}
+.page-content-p {
+	text-indent: 2em;
+}
+.page-content-list {
+	list-style: none;
+}
+.page-img {
+	/*width: 270px; */
+	/*height: 129px;*/
+	/*图片随窗口变化缩小, 以适应右侧form挤压后左侧div始终变窄*/
+	width: 70%;
+}
+.page-container-img {
+	float: left;
+	margin: 20px;
+	width: 136px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.page-container-img img {
+	width: 100%;
+}
+.page-table {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #CCC;
+}
+.page-table thead {
+	background-color: #111;
+	color: #FFF;
+}
+
+.page-table tfoot {
+	background-color: #AAA;
+}
+.page-table td {
+	padding: 5px;
+}
+.page-h-border {
+	display: block;
+	border-left: 4px solid #AAA;
+	padding-left: 10px;
+}
+
+.page5 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 400px;
+}
+
+.page-form-group {
+	padding: 10px 0;
+}
+.page-form-group-left {
+	float: left;
+	width: 40%;
+	/*偏移使垂直居中*/
+	margin-top: 3px;
+	text-align: right;
+}
+.page-form-group-right {
+	margin-left: 40%;
+	color: #AAA;
+	font-size: 14px;
+}
+.page-form-group input[type='text'],.page-form-group input[type='password'] {
+	height: 20px;
+	width: 180px;
+}
+.page-form-group textarea{
+	width: 200px;
+	height: 70px;
+}
+.page-form input[type='submit'] {
+	display: block;
+	margin: 0 auto;
+	width: 95%;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+	background-color: #4080D6;
+	color: white;
+	font-size: 18px;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	background-color: #000;
+	color: #FFF;
+	text-align: center;
+}
+footer p {
+	margin: 0;
+}
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
