@@ -100,7 +100,7 @@ p,hr {
 }
 .part1-title-700 {
 	/*按照标注会超出*/
-	margin-left: -20px;
+	margin-left: -20px !important;
 	color: #75B86B;
 	font:italic bold 116px/116px '微软雅黑';
 }
