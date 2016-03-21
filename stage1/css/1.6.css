@@ -99,6 +99,8 @@ p,hr {
 	font-family: '楷体';
 }
 .part1-title-700 {
+	/*按照标注会超出*/
+	margin-left: -20px;
 	color: #75B86B;
 	font:italic bold 116px/116px '微软雅黑';
 }
@@ -160,12 +162,11 @@ p,hr {
 .part1-p-text em {
 	color: #CD4A48;
 	font-family: '微软雅黑';
-
 }
 
 .container-part2 {
 	position: relative;
-	margin-top: 70px;
+	margin-top: 50px;
 }
 .part2-text {
 	float: left;
@@ -185,7 +186,6 @@ p,hr {
 span.part2-text-the {
 	float: left;
 	margin-top: -10px;
-	/*margin-right: 8px;*/
 	color: #F5E327;
 	font: italic bold 72px/42px '黑体';
 }
@@ -230,7 +230,7 @@ span.part2-text-the {
 	width: 458px;
 	height: 61px;
 	margin-top: -61px;
-	background-color: #767777;
+	background-color: black;
 	opacity:0.4;
 	 /* 针对 IE8 以及更早的版本 */
 	filter:alpha(opacity=40); 	
@@ -267,7 +267,8 @@ span.part2-text-the {
 	padding-top: 30px;
 }
 .part2-content ul li {
-	margin-top: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	color: #5a5b5b;
 	font-size: 16px;
 	line-height: 20px;
@@ -275,7 +276,7 @@ span.part2-text-the {
 	text-align: left;
 
 }
-.part2-content ul em {
+.part2-content ul i {
 	float: right;
 	color: #5a5b5b;
 	font-size: 12px;
@@ -356,7 +357,9 @@ span.part2-text-the {
 	margin-right: -15px;
 	margin-top: -10px;
 }
-
+.footer {
+	margin-top: 35px;
+}
 .footer hr {
 	width: 100%;
 	height: 1px;
@@ -368,6 +371,8 @@ span.part2-text-the {
 	font-family: "黑体";
 	color: #D45D5C;	
 }
+
+/*清除浮动*/
 .clearfix {
   display: block;
   zoom: 1;
@@ -379,4 +384,15 @@ span.part2-text-the {
     height: 0;
     clear: both;
     visibility: hidden;
+}
+/*三角形*/
+.triangle {
+	float: left;
+	margin-top: 3px;
+	margin-right: 5px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 12px solid #11456b;
 }
