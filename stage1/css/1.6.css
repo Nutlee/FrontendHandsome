@@ -34,9 +34,8 @@ p,hr {
 .head-color-block small {
 	margin-left:5px;
 	vertical-align:bottom;
-	font-size:12px;
-	font-family: '黑体';
 	color:#FFF;
+	font: 12px '黑体';
 }
 .head-right-date {
 	float:right;
@@ -133,9 +132,7 @@ p,hr {
 }
 .part1-p-text p {
 	color: #231815;
-	line-height: 16px;
-	font-size: 12px;
-	font-family: '微软雅黑';
+	font: 12px/16px '微软雅黑';
 	opacity:0.7;
 	 /* 针对 IE8 以及更早的版本 */
 	filter:alpha(opacity=70); 		
@@ -197,17 +194,13 @@ span.part2-text-the {
 .part2-text-main {
 	margin-top: 20px;
 	color: #767777;
-	font-size: 12px;
-	font-family: '宋体';
-	line-height: 16px;
+	font: 12px/16px '宋体';
 }
 .part2-text-main span {
 	float: left;
 	margin-right: 5px;
 	color: #F5e327;
-	font-size: 70px;
-	font-family: '微软雅黑';
-	line-height: 70px;
+	font: 70px/70px '微软雅黑';
 }
 .part2-text-main img {
 	float: right;
@@ -243,10 +236,8 @@ span.part2-text-the {
 	padding-left: 13px;
 	border-left: 3px solid #72B16A;
 	height: 44px;
-	line-height: 44px;
 	color: #FFF;
-	font-size: 26px;
-	font-family: '微软雅黑';
+	font: 26px/44px '微软雅黑';
 }
 .part2-pic-mask-tile em {
 	color: #72B16A;
@@ -270,18 +261,13 @@ span.part2-text-the {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	color: #5a5b5b;
-	font-size: 16px;
-	line-height: 20px;
-	font-family: '宋体';
+	font: 16px/20px '宋体';
 	text-align: left;
-
 }
 .part2-content ul i {
 	float: right;
 	color: #5a5b5b;
-	font-size: 12px;
-	line-height: 20px;
-	font-family: '宋体';
+	font: 12px/20px '宋体';
 	text-align: right;
 }
 .part2-content-bottom {
@@ -303,11 +289,8 @@ span.part2-text-the {
 	margin-left: 13px;
 	width: 70px;
 	border-right: 2px solid #FFF;
-	/*height: 86px;*/
 	color: #FFF;
-	font-size: 110px;
-	line-height: 86px;
-	font-family: '微软雅黑';
+	font: 110px/86px '微软雅黑';
 }
 .part2-content-redblock p {
 	margin: 0px;
@@ -319,34 +302,22 @@ span.part2-text-the {
 .part2-redblock-p1 {
 	color: #FFF;
 	font-style: italic;
-	font-size: 21px;
-	font-family: '黑体';
-	line-height: 24px;
+	font: 21px/24px '黑体';
 }
 .part2-redblock-p2 {
 	height: 12px;
 	color: #FFF;
-	font-size: 12px;
-	font-family: '黑体';
-	line-height: 6px;
+	font: 12px/6px '黑体';
 }
 .part2-content-quote {
 	margin-left: 260px;
 	padding: 20px 5px 0 5px;
-	/*padding-top: 20px;*/
 	color: #5a5b5b;
-	font-style: italic;
-	font-size: 14px;
-	font-family: '黑体';
-	line-height: 16px;
-
+	font: italic 14px/16px '黑体'
 }
 .quote-left,.quote-right {
 	color: #D45D5C;
-	font-size: 72px;
-	font-family: '黑体';
-	font-size: oblique;
-	line-height: 72px;
+	font: oblique 72px/72px '黑体';
 }
 .quote-left {
 	float: left;
@@ -374,8 +345,8 @@ span.part2-text-the {
 
 /*清除浮动*/
 .clearfix {
-  display: block;
-  zoom: 1;
+  	display: block;
+  	zoom: 1;
 }
 .clearfix:after {
     content: " ";
