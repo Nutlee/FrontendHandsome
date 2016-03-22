@@ -46,8 +46,8 @@ body {
 	border: 1px solid;
 }
 .clearfix {
-	 display: block;
-	 zoom: 1;
+	display: block;
+	zoom: 1;
 }
 .clearfix:after {
     content: " ";

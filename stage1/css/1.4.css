@@ -8,6 +8,9 @@ body {
 p {
 	margin: 0;
 }
+strong{
+	color: red;
+}
 .container {
 	position: relative;
 	height: 300px;
@@ -86,6 +89,7 @@ p {
 	display: inline-block;
 	height: auto;
 	vertical-align: middle;
+	text-align: initial;
 }
 .container2 i {
 	display: inline-block;
@@ -99,7 +103,6 @@ p {
 .container3 {
 	height: 1200px;
 	text-align: center;
-	/*overflow: auto;*/
 }
 .container3:after,.container-center3 {
 	display: inline-block;

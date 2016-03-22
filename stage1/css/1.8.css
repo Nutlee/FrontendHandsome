@@ -208,8 +208,8 @@
 
 /*清除浮动*/
 .clearfix {
-  display: block;
-  zoom: 1;
+	display: block;
+	zoom: 1;
 }
 .clearfix:after {
     content: " ";

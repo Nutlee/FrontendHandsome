@@ -65,6 +65,7 @@ header ul a {
 	list-style: none;
 }
 .page-img {
+	/*如果写死高度，缩小到一定程度右侧side会浮上来*/
 	/*width: 270px; */
 	/*height: 129px;*/
 	/*图片随窗口变化缩小, 以适应右侧form挤压后左侧div始终变窄*/
@@ -158,8 +159,8 @@ footer p {
 	margin: 0;
 }
 .clearfix {
-  display: block;
-  zoom: 1;
+  	display: block;
+  	zoom: 1;
 }
 .clearfix:after {
     content: " ";
