@@ -1,0 +1,91 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	position: relative;
+	padding: 20px;
+	border: 1px solid #999;
+	background-color: #eee;
+}
+/**
+ * 方案一 两侧边栏float 中间设置左右margin
+ */
+/*.container-left {
+	float: left;
+	width: 190px;
+	padding: 5px;
+	background-color: white;
+}
+.container-center {
+	margin-left: 220px;
+	margin-right: 140px;
+	padding: 20px;
+	background-color: white;
+}
+.container-right {
+	float: right;
+	width: 110px;
+	padding: 5px;
+	background-color: white;
+	text-align: center;
+}*/
+
+/**
+ * 方案二 左右固定absolute 中间填充
+ * 缺点 左右均需要精确定位（尤其是父容器有padding时），absolute不能撑开父容器
+ */
+
+.container-left {
+	position: absolute;
+	padding: 5px;
+	/*absolute化后会"跟随"*/
+	/*margin-top: 0;*/
+	width: 190px;
+	background-color: white;
+}
+
+.container-center {
+	padding: 20px;
+	margin-left: 220px;
+	margin-right: 140px;
+	background-color: white;
+}
+.container-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 20px;
+	margin-top: 20px;
+	padding: 5px;
+	width: 110px;
+	background-color: white;
+	text-align: center;
+}
+
+.container-left img {
+	width: 80px;
+	height: 80px;
+}
+.container-left span {
+	float: right;
+	width: 110px;
+}
+.container-right img {
+	margin-top: 10px;
+	width: 80px;
+	height: 80px;
+	border: 1px solid;
+}
+.clearfix {
+	 display: block;
+	 zoom: 1;
+}
+.clearfix:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

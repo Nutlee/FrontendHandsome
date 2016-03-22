@@ -1,0 +1,121 @@
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	height: 100%;
+}
+p {
+	margin: 0;
+}
+strong{
+	color: red;
+}
+.container {
+	position: relative;
+	height: 300px;
+	border: 1px solid;
+}
+.container-center {
+	margin: 0 auto;
+	height: 200px;
+	width: 400px;
+	background-color: #CCC;
+	/*overflow: auto;*/
+}
+/**
+ * 四分之一圆另外做法是 放置整个圆进行定位
+ */
+.circular0,.circular1 {
+	width: 50px;
+	height: 50px;
+	background-color: yellow;
+}
+.circular0 {
+	border-radius: 0 0 50px 0;	
+}
+.circular1 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-radius: 50px 0 0 0;
+}
+/**
+ * 方法一 灰色区域固定大小 IE8~10 overflow
+ * 关于固定高度还有两种做法
+ * 1. absolute top: -50% margin-top: - 自身高度/2;
+ * 2. 容器上方用div占位高度为50%, 居中容器再margin-top: -自身高度/2;
+ */
+.container-center0 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+
+/**
+ * 方法二 多增加一个容器
+ */
+
+.container1 {
+	display: table;
+	position: static;
+	height: 1200px;
+	margin: 0 auto;
+}
+.container-table {
+	display: table-cell;
+	vertical-align: middle;
+}
+.container-center1 {
+	position: relative;
+	height: auto;
+ }
+
+ /**
+  * 方法三 使用 display: inline-block 和 vertical-align 属性;
+  * 同样原理可以用 after before 伪类构造标签
+  */
+
+.container2 {
+	height: 1200px;
+	text-align: center;
+}
+.container-center2 {
+	position: relative;
+	display: inline-block;
+	height: auto;
+	vertical-align: middle;
+	text-align: initial;
+}
+.container2 i {
+	display: inline-block;
+	height:100%;
+	vertical-align: middle;
+}
+
+/**原理同上
+ * 用 after before 伪类构造标签
+ */
+.container3 {
+	height: 1200px;
+	text-align: center;
+}
+.container3:after,.container-center3 {
+	display: inline-block;
+	vertical-align: middle;
+}
+.container3:after {
+	content: '';
+	height: 100%;
+	margin-left: -0.25em; /* To offset spacing. May vary by font */
+}
+.container-center3 {
+	position: relative;
+	height: auto;
+	max-width: 99%;  /* Prevents issues with long content causes the content block to be pushed to the top */
+	/* max-widht: calc(100% - 0.25em) /* Only for IE9+/
+}
