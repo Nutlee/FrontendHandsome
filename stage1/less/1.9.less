@@ -1,0 +1,352 @@
+@font-size: 12px;
+
+@html-min-width: 1280px;
+@nav-height: 56px;
+@nav-bg: #228abf;
+@nav-logo-width: 36px;
+@nav-logo-height: @nav-logo-width;
+@nav-logo-left: 30px;
+@nav-logo-bg: white;
+@nav-logo-border-width: 3px;
+@nav-right-margin-top: (@nav-height - @nav-search-input-height)/2;
+@nav-search-icon-color: #b1b1b1;
+@nav-seatch-icon-margin-top: 5px;
+@nav-seatch-icon-margin-left: 15px;
+@nav-search-icon-size: 16px;
+@nav-search-input-height: 28px;
+@nav-search-input-width: 313px;
+@nav-search-input-margin-right: 20px;
+@nav-search-input-padding-left: 40px;
+@nav-search-input-radius: 50px;
+@nav-login-span-margin-right: 40px;
+@nav-login-icon-size: @nav-search-icon-size + 2px;
+@nav-login-icon-color: white;
+
+@main-container-top: @nav-height;
+
+@side-width: 260px;
+@side-profile-height: 150px;
+@side-profile1-height: 60%;
+@side-avatar1-height: 53px;
+@side-avatar1-margin-left: 40px;
+@side-avatar1-border-w: 1px;
+@side-avatar1-border: @side-avatar1-border-w solid #b9babe;
+@side-avatar1-padding: 3px;
+@side-profile1-a-margin-left: @side-avatar1-height + @side-avatar1-margin-left + @side-avatar1-padding + @side-avatar1-border-w + 20px;
+@side-profile1-a-lheight: @side-profile-height * 0.6;
+@side-profie2-padding-top: 10px;
+@side-profile2-color: #6e8095;
+@side-profile2-p-width: 50%;
+@side-collection-border-right: 1px solid #323647;
+@side-collection-padding-right: 40px;
+@side-content-color: @side-profile2-color;
+@side-tree-active-bg: #393e4e;
+@side-tree-level1-icon-mright: 15px;
+@tree-level-1-pleft: 48px;
+@tree-level-1-height: 36px;
+@tree-level-1-lheight: 36px;
+@tree-level-other-icon-mright: 2px;
+@tree-level-2-pleft: 20px; 
+@tree-level-2-lheight: 28px;
+@tree-level-3-pleft: 35px;
+@tree-level-3-lheight: 26px;
+
+@content-mleft: @side-width;
+@content-bg: #eeeded;
+@content-breadcrumb-bg: white;
+@content-breadcrumb-color: #aaa;
+@content-breadcrumb-pleft:20px;
+@breadcrumb-lheight: 30px;
+@breadcrumb-margin: 0 15px;
+
+@content-main-top: @breadcrumb-lheight;
+//图标
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1458922225_5889542.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1458922225_5889542.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1458922225_5889542.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1458922225_5889542.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1458922225_5889542.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+html,body,p,ul {
+	margin: 0;
+	padding: 0;
+}
+input,button,select,textarea{outline:none}
+ul {
+	list-style: none;
+}
+html {
+	// min-width: 1280px;
+}
+body {
+	font: @font-size/1.5 Microsoft YaHei,arial,sans-serif,'宋体';
+}
+.radius (@top,@right,@bottom,@left) {
+  	-webkit-border-radius: @top @right @bottom @left;
+  	-moz-border-radius: @top @right @bottom @left;
+  	border-radius: @top @right @bottom @left;
+}
+.radius (@radius) {
+  	-webkit-border-radius: @radius;
+  	-moz-border-radius: @radius;
+  	border-radius: @radius;	
+}
+/*清除浮动*/
+.clearfix {
+	display: block;
+	zoom: 1;
+}
+.clearfix:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+.nav {
+	height: @nav-height;
+	width: 100%;
+	background-color: @nav-bg; 
+}
+.nav-logo-1 {
+	position: relative;
+	float: left;
+	top: 50%;
+	margin-top: -@nav-logo-height/2;
+	margin-left: @nav-logo-left;
+	height: @nav-logo-height;
+	width: @nav-logo-width;
+	background-color: @nav-logo-bg;
+	.nav-logo-2 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: @nav-logo-height/2-@nav-logo-border-width;
+		width: @nav-logo-height/2-@nav-logo-border-width;
+		width:-moz-calc(~"50%" - @nav-logo-border-width);
+		width:-webkit-calc(~"50%" - @nav-logo-border-width);
+		width: calc(~"50%" - @nav-logo-border-width);	
+		height:-moz-calc(~"50%" - @nav-logo-border-width);
+		height:-webkit-calc(~"50%" - @nav-logo-border-width);
+		height: calc(~"50%" - @nav-logo-border-width);					
+		background-color: @nav-logo-bg;
+		border-top: @nav-logo-border-width solid @nav-bg;
+		border-left: @nav-logo-border-width solid @nav-bg;
+	}
+}
+.nav-right {
+	position: relative;
+	float: right;
+	margin-top: @nav-right-margin-top;
+	// .nav-search {
+	// 	i {
+	// 		position: absolute;
+	// 		margin-left: 10px;
+	// 		margin-top: 15px;
+	// 		color: @nav-search-icon-color;
+	// 		font-family: "iconfont";
+	// 		font-size: 16px;
+	// 		font-style: normal;		
+	// 	}
+	// }
+	.nav-search-icon {
+		position: absolute;
+		margin-left: @nav-seatch-icon-margin-left;
+		margin-top: @nav-seatch-icon-margin-top;
+		color: @nav-search-icon-color;
+		font-family: "iconfont";
+		font-size: @nav-search-icon-size;
+		font-style: normal;			
+	}
+	.nav-search-input {
+		// float: left;
+		height: @nav-search-input-height;
+		width: @nav-search-input-width;
+		padding-left: @nav-search-input-padding-left;     
+		margin-right: @nav-search-input-margin-right;
+		border: none;
+		.radius(@nav-search-input-radius);
+		line-height: @nav-search-input-height;
+	}
+	.nav-login-icon {
+		color: @nav-login-icon-color;
+		font-family: "iconfont";
+		font-size: @nav-login-icon-size;
+		font-style: normal;	
+	}
+	span {
+		margin-right: @nav-login-span-margin-right;
+		color: white;
+	}
+}
+
+.main-container {
+	position: absolute;
+	top: @main-container-top;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	min-width: @html-min-width;
+}
+.side {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: @side-width;
+	background-color: #2a2e3d;
+}
+.side-profile {
+	height: @side-profile-height;
+}
+.side-profile1 {
+	position: relative;
+	height: @side-profile1-height;
+	// text-align: center;
+	.side-avatar1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: @side-avatar1-height;
+		width: @side-avatar1-height;
+		border: @side-avatar1-border;
+		padding: @side-avatar1-padding;
+		margin: auto;
+		margin-left: @side-avatar1-margin-left;
+		// background-color: white;
+		.radius(50%);
+	}
+	.side-avatar2 {
+		height:100%;
+		width: 100%;
+		.radius(50%);
+		background-color: #b9babe;
+	}
+	a {
+		margin-left: @side-profile1-a-margin-left;
+		line-height: @side-profile1-a-lheight;
+		font-size: @font-size + 4;
+		color: white;
+		text-decoration: none;
+	}
+}
+.side-profile2 {
+	padding-top: @side-profie2-padding-top;
+	color: @side-profile2-color;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	p {
+	float: left;
+	width: @side-profile2-p-width;
+	text-align: center;
+	box-sizing: border-box;
+	}
+	.side-collection {
+		border-right: @side-collection-border-right;
+		text-align: right;
+		padding-right: @side-collection-padding-right;
+	}
+	.side-fans {
+		text-align: left;
+		padding-left: @side-collection-padding-right;
+	}
+}
+.side-tree {
+	color: @side-content-color;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	i {
+		margin-right: @side-tree-level1-icon-mright;
+		color: inherit;
+		font-family: "iconfont";
+		font-size: inherit;
+		font-style: normal;			
+	}	
+	>li:hover {
+		background-color: @side-tree-active-bg;
+		cursor: pointer;
+	}
+}
+.tree-level-1 {
+	padding-left: @tree-level-1-pleft;
+	height: @tree-level-1-height;
+	line-height: @tree-level-1-lheight;
+	>ul i {
+		margin-right: @tree-level-other-icon-mright;
+	}
+	.tree-second-icon {
+		// margin-right: 0;
+	}
+}
+.tree-level-active {
+	height: auto !important;
+	background-color: @side-tree-active-bg;
+	>a {
+		color: white;
+	}
+}
+.tree-level-2 {
+	padding-left: @tree-level-2-pleft;
+	line-height: @tree-level-2-lheight;
+}
+.tree-level-3 {
+	padding-left: @tree-level-3-pleft;
+	line-height: @tree-level-3-lheight;
+}
+
+
+.content {
+	position: relative;
+	margin-left: @content-mleft;
+	height: 100%;
+	background-color: @content-bg;
+	overflow: hidden;
+}
+.content-breadcrumb {
+	background-color: @content-breadcrumb-bg;
+	color: @content-breadcrumb-color;
+	padding-left: @content-breadcrumb-pleft;
+	li {
+		float: left;
+	}
+	span {
+		line-height: @breadcrumb-lheight;
+		margin: @breadcrumb-margin;
+	}
+}
+.content-main {
+	position: absolute;
+	top: @content-main-top;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 20px 60px;
+}
+.content-search {
+	width: 891px;
+	height: 86px;
+	border: 1px solid #ddd;
+	background-color: white;
+	box-sizing: border-box;
+
+}

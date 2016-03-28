@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>使用HTML/CSS实现一个复杂页面</title>
+	<link rel="stylesheet" href="css/1.9.min.css">
+</head>
+<body>
+	<nav class="nav">
+		<div class="nav-logo-1">
+			<div class="nav-logo-2"></div>
+		</div>
+		<div class="nav-right">
+			<!-- <div class="nav-search"> -->
+				<i class="nav-search-icon">&#xe600;</i>
+				<input class="nav-search-input" type="text">
+			<!-- </div> -->
+			<!-- <div class="login"> -->
+				<i class="nav-login-icon">&#xe601;</i>
+				<span>登录</span>
+			<!-- </div> -->
+		</div>
+	</nav>
+	<div class="main-container">
+		<div class="side">
+			<div class="side-profile">
+				<div class="side-profile1">
+					<div class="side-avatar1">
+						<div class="side-avatar2"></div>
+					</div>
+					<a href="">前端美男子</a>
+				</div>
+				<div class="side-profile2 clearfix">
+					<p class="side-collection">
+						<a href="#">110</a><br/>收藏
+					</p>
+					<p class="side-fans">
+						<a href="#">313</a><br/>粉丝
+					</p>
+				</div>
+			</div>
+			<div class="side-content">
+				<ul class="side-tree">
+					<li class="tree-level-1 tree-level-active">
+						<a href="#"><i>&#xe606;</i>个人报表</a>
+						<ul>
+							<li class="tree-level-2">
+								<i>&#xe602;</i>
+								<i>&#xe607;</i>
+								<a href="#">文件一</a>
+							</li>
+							<li class="tree-level-2 tree-level-active">
+								<i>&#xe602;</i>
+								<i>&#xe607;</i>
+								<a href="#">文件二</a>
+								<ul>
+									<li class="tree-level-3"><i>&#xe607;</i><a href="#">文档</a></li>
+									<li class="tree-level-3"><i>&#xe607;</i><a href="#">文档</a></li>
+								</ul>
+							</li>
+							<li class="tree-level-2">
+								<i>&#xe602;</i>
+								<i>&#xe607;</i>
+								<a href="#">文件三</a>
+							</li>
+						</ul>
+					</li>
+					<li class="tree-level-1"><i>&#xe603;</i><a href="#">我的分享</a></li>
+					<li class="tree-level-1"><i>&#xe604;</i><a href="#">图库</a></li>
+					<li class="tree-level-1"><i>&#xe604;</i><a href="#">成长记录</a></li>
+					<li class="tree-level-1"><i>&#xe605;</i><a href="#">账户信息</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content-breadcrumb clearfix">
+				<ul class="clearfix">
+					<li>
+						<span>C站</span>
+						<i>/</i>
+					</li>
+					<li>
+						<span>个人报表</span>
+						<i>/</i>
+					</li>
+					<li>
+						<span>文件一</span>
+						<i>/</i>
+					</li>
+					<li>
+						<span>文档一</span>
+					</li>
+				</ul>
+			</div>
+			<div class="content-main">
+				<div class="content-search">
+					<div class="search-item"></div>
+					<div class="search-eachbusiness"></div>
+					<div class="search-option"></div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>
