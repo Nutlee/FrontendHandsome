@@ -625,13 +625,15 @@ body {
 .content-first-groupe {
 	margin-top: @content-first-groupe-mtop;
 }
-.first-groupe-table {
-	float: left;
-	width: @first-groupe-width;
+.first-groupe-table, .first-groupe-detail {
 	height: @first-groupe-height;
 	border: @first-groupe-table-border;
 	.radius(@first-groupe-radius);
 	overflow: hidden;
+}
+.first-groupe-table {
+	float: left;
+	width: @first-groupe-width;
 }
 .groupe-table-head {
 	padding-left: @groupe-tab-table-padding;
@@ -652,6 +654,7 @@ body {
 @groupe-tab-head-mright: 4px;
 @groupe-tab-head-bg: #ededf0;
 @groupe-tab-table-1-min-width: 488.984px; 
+@groupe-tab-table-1-padding: 40px;
 .groupe-tab-table {
 	li {
 		float: left;
@@ -691,25 +694,117 @@ body {
 		width:-webkit-calc(~"100%" - @groupe-tab-table-padding*2);
 		width: calc(~"100%" - @groupe-tab-table-padding*2);	
 		min-width: @groupe-tab-table-1-min-width; 
-		padding: 40px;
-		border: 1px solid #ccc;
-
+		padding: @groupe-tab-table-1-padding;
+		border: @first-groupe-table-border;
 	}
-}
-.first-groupe-detail {
-	float: right;
-	width: 39.4382%;
-	height: 357px;
-	border: 1px solid #ccc;
-	.radius(8px);
 }
 .ta-table {
 	width: 100%;
 	height: 100%;
-	border: 1px solid #ccc;
+	border: @first-groupe-table-border;
 	border-collapse: collapse;
 	td {
-		border: 1px solid #ccc;
+		border: @first-groupe-table-border;
+		text-align: left;
+		padding-left: 10px;
+	}
+}
+@first-groupe-detail-width: 39.4382%;
+@first-groupe-detail-lheight: 25px;
+@first-groupe-detail-height: @first-groupe-height;
+@groupe-detail-content-padding-bottom: 20px;
+@groupe-detail-content-padding: @groupe-detail-content-padding-bottom 40px;
+@groupe-detail-head-tag-color: #c3c2c2;
+@groupe-detail-head-tag-mleft: 20px;
+.first-groupe-detail {
+	float: right;
+	width: @first-groupe-detail-width;
+	line-height: @first-groupe-detail-lheight;
+}
+.groupe-detail-head-tag, .groupe-detail-price-head, .groupe-detail-principal-head, .groupe-detail-dec-head {
+	color: @groupe-detail-head-tag-color;
+}
+.groupe-detail-head-tag, .groupe-detail-head{
+	margin-left: @groupe-detail-head-tag-mleft;
+}
+@groupe-detail-price-width: 31.0679%;
+@groupe-detail-price-min-width: 96px;
+@groupe-detail-price-border: 1px solid #ccc;
+@groupe-detail-principal-width: 68%;
+@groupe-detail-principal-min-width: 184px;
+@groupe-detail-principal-pleft: 10px;
+.groupe-detail-priceprincipal {
+	span {
+		display: inline-block;
+		box-sizing: inherit;
+	}
+	.groupe-detail-price {
+		width: @groupe-detail-price-width;
+		min-width: @groupe-detail-price-min-width;
+		border-top: @groupe-detail-price-border;
+		border-right: @groupe-detail-price-border;
+		border-bottom: @groupe-detail-price-border;
+		padding-left: @groupe-detail-head-tag-mleft;
+	}
+	.groupe-detail-principal {
+		width: @groupe-detail-principal-width;
+		min-width: @groupe-detail-principal-min-width;
+		border-top: @groupe-detail-price-border;
+		border-bottom: @groupe-detail-price-border;
+		padding-left: @groupe-detail-principal-pleft;
+	}
+}
+.groupe-detail-dec-head {
+	padding-left: @groupe-detail-head-tag-mleft;
+}
+.groupe-detail-dec {
+	padding-left: @groupe-detail-head-tag-mleft;
+}
+@groupe-detail-confirm-button-height: 25px;
+@groupe-detail-confirm-button-width: 49px;
+@groupe-detail-confirm-button-mright: 160px;
+@groupe-detail-confirm-button-bg: #388ac1;
+.groupe-detail-confirm {
+	position: absolute;
+	bottom: @groupe-detail-content-padding-bottom;
+	border-top: @groupe-detail-price-border;
+	padding-top: 2px;
+	line-height: inherit;
+	button {
+		margin-left: @groupe-detail-confirm-button-mright;
+		height: @groupe-detail-confirm-button-height;
+		width: @groupe-detail-confirm-button-width;
+		border: 0;
+		background-color: @groupe-detail-confirm-button-bg;
+		color: white;
+	}
+}
+
+@content-other-mtop: 10px;
+@content-other-height: 350px;
+.content-other {
+	margin-top: @content-other-mtop;
+	height: @content-other-height;
+}
+.other-date {
+	float: left;
+}
+.other-toplist {
+	float: right;
+	width: 59.5505%;
+	min-width: 530px;
+	height: 100%;
+	border: @first-groupe-table-border;
+	.radius(@first-groupe-radius);
+	overflow: hidden;
+}
+.other-toplist-table {
+	width: 100%;
+	height: 100%;
+	border: @first-groupe-table-border;
+	border-collapse: collapse;
+	thead, td {
+		border: @first-groupe-table-border;
 		text-align: left;
 		padding-left: 10px;
 	}
