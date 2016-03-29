@@ -11,24 +11,20 @@
 			<div class="nav-logo-2"></div>
 		</div>
 		<div class="nav-right">
-			<!-- <div class="nav-search"> -->
 				<i class="nav-search-icon">&#xe600;</i>
 				<input class="nav-search-input" type="text">
-			<!-- </div> -->
-			<!-- <div class="login"> -->
 				<i class="nav-login-icon">&#xe601;</i>
 				<span>登录</span>
-			<!-- </div> -->
 		</div>
 	</nav>
-	<div class="main-container">
+	<div class="main-container clearfix">
 		<div class="side">
 			<div class="side-profile">
 				<div class="side-profile1">
 					<div class="side-avatar1">
 						<div class="side-avatar2"></div>
 					</div>
-					<a href="">前端美男子</a>
+					<a href="#">前端美男子</a>
 				</div>
 				<div class="side-profile2 clearfix">
 					<p class="side-collection">
@@ -54,7 +50,7 @@
 								<i>&#xe607;</i>
 								<a href="#">文件二</a>
 								<ul>
-									<li class="tree-level-3"><i>&#xe607;</i><a href="#">文档</a></li>
+									<li class="tree-level-3 tree-level-active"><i>&#xe607;</i><a href="#">文档</a></li>
 									<li class="tree-level-3"><i>&#xe607;</i><a href="#">文档</a></li>
 								</ul>
 							</li>
@@ -76,27 +72,229 @@
 			<div class="content-breadcrumb clearfix">
 				<ul class="clearfix">
 					<li>
-						<span>C站</span>
-						<i>/</i>
+						<span>C站</span>/
 					</li>
 					<li>
-						<span>个人报表</span>
-						<i>/</i>
+						<span>个人报表</span>/
 					</li>
 					<li>
-						<span>文件一</span>
-						<i>/</i>
+						<span>文件一</span>/
 					</li>
 					<li>
-						<span>文档一</span>
+						<span><a href="#">文档一</a></span>
 					</li>
 				</ul>
 			</div>
 			<div class="content-main">
 				<div class="content-search">
-					<div class="search-item"></div>
-					<div class="search-eachbusiness"></div>
-					<div class="search-option"></div>
+					<div class="search-item">
+						<span>查询项</span>
+						<select>
+							<option value="item1">第一项</option>
+						</select>
+					</div>
+					<div class="search-eachbusiness">
+						<ul>
+							<li>
+								<span>买方</span><select><option value="a">小A</option></select>
+							</li>
+							<li>	
+								<span>卖方</span><select><option value="a">小C</option></select>		
+							</li>
+						</ul>
+						<div class="eachbusiness-exchange-button">
+							<a href="#">换</a>					
+						</div>
+					</div>
+					<div class="search-option">
+						<div class="option-line1">
+							<span>日期</span><input class="search-inputdate" type="date" value="2016-04-01"></input><span>总耗时</span><select class="search-timecon"><option value="timecon">1天</option></select>
+						</div>
+						<div class="option-line2">
+							<span>人数</span><select class="search-peoplecount"><option value="peoplecount">1人</option></select><span>成交项</span><select class="search-susitem"><option value="susitem">3项</option></select>
+						</div>
+					</div>
+					<button class="search-confirmbtn">搜索</button>
+				</div>
+				<div class="content-hisquery">
+					<div class="hisquery-leftbtn">
+						<a href="#">&#xe608;</a>
+					</div>
+					<ul class="hisquery-item">
+						<li class="hisquery-item-active">
+							<p>10:00&nbsp;am</p>
+							<strong><small>&#165;</small>1200</strong>
+						</li>
+						<li>
+							<p>10:00&nbsp;am</p>
+							<strong><small>&#165;</small>1200</strong>
+						</li>
+						<li>
+							<p>10:00&nbsp;am</p>
+							<strong><small>&#165;</small>1200</strong>
+						</li>
+						<li>
+							<p>10:00&nbsp;am</p>
+							<strong><small>&#165;</small>1200</strong>
+						</li>
+						<li>
+							<p>10:00&nbsp;am</p>
+							<strong><small>&#165;</small>1200</strong>
+						</li>
+						<li>
+							<p>10:00&nbsp;am</p>
+							<strong><small>&#165;</small>1200</strong>
+						</li>
+					</ul>
+					<div class="hisquery-rightbtn">
+						<a href="#">&#xe602;</a>
+					</div>
+					<button class="hisquery-btn">
+						<span><a href="#">历史查询</a></span>
+					</button>
+				</div>
+				<div class="content-count">
+					<p class="count-head">2016年4月份统计</p>
+					<ul class="count-item">
+						<li class="count-item-1">
+							<p>133311<br/><small>成交量</small></p>
+							<div></div>
+						</li>
+						<li class="count-item-2">
+							<p>133311<br/><small>成交量</small></p>
+							<div></div>							
+						</li>
+						<li class="count-item-3">
+							<p>133311<br/><small>成交量</small></p>
+							<div></div>							
+						</li>
+						<li class="count-item-4">
+							<p>133311<br/><small>成交量</small></p>
+							<div></div>							
+						</li>
+					</ul>
+				</div>
+				<div class="content-first-groupe clearfix">
+					<div class="first-groupe-table">
+						<div class="groupe-table-head">第一组项目</div>
+						<ul class="groupe-tab-table">
+							<li class="groupe-tab-table-active">
+								<p>项目一</p>
+								<div class="groupe-tab-table-1">
+									<table class="ta-table">
+										<tbody>
+											<tr>
+												<td>购买材料一</td>
+												<td>购买材料一</td>
+												<td>购买材料一</td>
+												<td>购买材料一</td>
+											</tr>											
+											<tr>
+												<td>购买材料二</td>
+												<td>购买材料二</td>
+												<td>购买材料二</td>
+												<td>购买材料二</td>
+											</tr>											
+											<tr>
+												<td>购买材料四</td>
+												<td>购买材料四</td>
+												<td>购买材料四</td>
+												<td>购买材料四</td>
+											</tr>
+											<tr>
+												<td>购买材料六</td>
+												<td>购买材料六</td>
+												<td>购买材料六</td>
+												<td>购买材料六</td>
+											</tr>												
+											<tr>
+												<td>购买材料十三</td>
+												<td>购买材料十三</td>
+												<td>购买材料十三</td>
+												<td>购买材料十三</td>
+											</tr>												
+											<tr>
+												<td>购买材料二十</td>
+												<td>购买材料二十</td>
+												<td>购买材料二十</td>
+												<td>购买材料二十</td>
+											</tr>											
+										</tbody>
+									</table>
+								</div>
+							</li>
+							<li>
+								<p>项目二</p>
+								<div class="groupe-tab-table-2"></div>
+							</li>
+							<li>
+								<p>项目三</p>
+								<div class="groupe-tab-table-3"></div>
+							</li>
+							<li>
+								<p>项目四</p>
+								<div class="groupe-tab-table-4"></div>
+							</li>
+							<li>
+								<p>项目五</p>
+								<div class="groupe-tab-table-5"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="first-groupe-detail">
+						<div class="groupe-table-head">第一组项目</div>
+						<div class="groupe-tab-table groupe-detail-content">
+							<p class="groupe-detail-head-tag">标题</p>
+							<p class="groupe-detail-head">项目报表三</p>
+							<div class="groupe-detail-priceprincipal">
+								<span class="groupe-detail-price">
+									<p class="groupe-detail-price-head">价格</p>
+									<p class="groupe-detail-price-1">&#165;158</p>
+								</span><span class="groupe-detail-principal">
+									<p class="groupe-detail-principal-head">负责人</p>
+									<p class="groupe-detail-principal-1">小A</p>
+								</span>
+							</div>
+							<p class="groupe-detail-dec-head">详细描述</p>
+							<p class="groupe-detail-dec">项目负责人...</p>
+							<p class="groupe-detail-confirm"> 
+								<input type="checkbox" name="respect" value="true">遵守保密协议
+								<button>搜索</button>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="content-other">
+					<div class="first-groupe-detail other-date">
+						<div class="groupe-table-head">日历</div>
+						<div class="groupe-tab-table"></div>
+					</div>
+					<div class="first-groupe-detail other-toplist">
+						<div class="groupe-table-head">汽车行业品牌榜</div>
+						<div class="groupe-tab-table">
+							<table class="other-toplist-table">
+								<thead>
+									<tr>
+										<th>排名</th>
+										<th>品牌</th>					
+										<th>搜索指数</th>
+									</tr>
+								</thead>							
+								<tbody>
+									<tr><td>1</td><td>大众</td></tr>
+									<tr><td>2</td><td>丰田</td></tr>
+									<tr><td>3</td><td>奥迪</td></tr>
+									<tr><td>4</td><td>本田</td></tr>
+									<tr><td>5</td><td>福特</td></tr>
+									<tr><td>6</td><td>宝马</td></tr>
+									<tr><td>7</td><td>现代</td></tr>
+									<tr><td>8</td><td>起亚</td></tr>
+									<tr><td>9</td><td>奔驰</td></tr>
+									<tr><td>10</td><td>别克</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>		
