@@ -117,14 +117,8 @@
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-html,body,p,ul {
+                                              
+html,body,p,ul,th,td {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -140,7 +134,7 @@ a {
 	text-decoration: none;
 }
 html {
-	// min-width: 1280px;
+	min-width: @html-min-width;
 }
 body {
 	font: @font-size/1.5 Microsoft YaHei,arial,sans-serif,'宋体';
@@ -530,6 +524,7 @@ body {
 	min-width: @hisquery-btn-min-width;
 	border: 0;
 	line-height: @hisquery-btn-height;
+	background-color: white;
 	a {
 		color: initial;
 	}
@@ -538,8 +533,8 @@ body {
 @content-count-mtop: 20px;
 @content-count-height: 90px;
 @count-item-height: @content-count-height - @count-head-lheight;
-@count-item-width: 201px;
-@count-item-li-margin: 1.428%;
+@count-item-width: 20.5%;
+@count-item-li-margin: 2.2511%;
 @count-item-bg: @content-breadcrumb-bg;
 @count-item-border: @content-search-border;
 @count-head-lheight: 25px;
@@ -557,12 +552,10 @@ body {
 .count-head {
 	line-height: @count-head-lheight;
 }
-
 .count-item {
-	float: left;
-	width: 102.28576%;
 	margin-left: -@count-item-li-margin;
 	margin-right: -@count-item-li-margin;
+	overflow: hidden;
 	box-sizing: inherit;
 	li {
 		float: left;
@@ -606,6 +599,7 @@ body {
 		}			
 	}	
 	.count-item-4 {
+		// margin-left: -3%;
 		border-left: 3px solid @count-item-4-color;
 		div {
 			background-color: @count-item-4-color;
@@ -770,6 +764,7 @@ body {
 	border-top: @groupe-detail-price-border;
 	padding-top: 2px;
 	line-height: inherit;
+	color: @groupe-detail-head-tag-color;
 	button {
 		margin-left: @groupe-detail-confirm-button-mright;
 		height: @groupe-detail-confirm-button-height;
@@ -788,24 +783,121 @@ body {
 }
 .other-date {
 	float: left;
+	height: 100%;
 }
+@other-date-table-lheight: 21px;
+.other-date-table {
+	padding-top: 0;
+	line-height: @other-date-table-lheight;
+}
+@other-date-select-height: 42px;
+@other-date-select-ptop: 10px;
+
+.other-date-select {
+	height: @other-date-select-height;
+	padding-top: @other-date-select-ptop;
+	padding-bottom: @other-date-select-ptop;
+}
+.date-select-year {
+	width: 20.7119%;
+	margin-right: 1%
+}
+.date-select-month {
+	width: 27.5081%;
+	margin-right: 1%
+}
+.date-mark {
+	width: 24.2718%;
+	margin-right: 1%
+}
+.date-returnnow {
+	width: 20.7119%;
+}
+@other-date-calendar-head-height: 30px;
+.other-date-calendar {
+	border-collapse: collapse;
+	border-spacing: 0;
+	thead td{
+		border-top: 1px solid blue;
+		border-bottom: 1px solid #ccc;
+		height: @other-date-calendar-head-height;
+	}
+
+}
+@calendar-hot-color: #c9161d;
+.calendar-hot {
+	color: @calendar-hot-color;
+}
+@calendar-mark-border: 1px solid #f4c21d;
+.calendar-mark {
+	border: @calendar-mark-border;
+}
+
+// 汽车行业品牌榜
+@other-toplist-width: 59.5505%;
+@other-toplist-min-width: 530px;
 .other-toplist {
 	float: right;
-	width: 59.5505%;
-	min-width: 530px;
+	width: @other-toplist-width;
+	min-width: @other-toplist-min-width;
 	height: 100%;
-	border: @first-groupe-table-border;
-	.radius(@first-groupe-radius);
-	overflow: hidden;
+	// border: @first-groupe-table-border;
+	// .radius(@first-groupe-radius);
+	// overflow: hidden;
 }
+.other-date-calendar {
+	width: 100%;
+	text-align: center;
+}
+
+@other-toplist-table-alignleft-pleft: 10%;
+@other-toplist-table-tr-height: 23px;
+@other-toplist-table-tr-hover-bg: #f4f5f6;
 .other-toplist-table {
 	width: 100%;
-	height: 100%;
 	border: @first-groupe-table-border;
+	line-height: initial;
 	border-collapse: collapse;
-	thead, td {
+	border-spacing: 0;
+	td, th {
 		border: @first-groupe-table-border;
-		text-align: left;
-		padding-left: 10px;
+		text-align: center;
 	}
+	.other-toplist-table-alignleft {
+		text-align: left;
+		padding-left: @other-toplist-table-alignleft-pleft;
+	}
+	tr {
+		height: @other-toplist-table-tr-height;
+	}
+	tbody tr:hover {
+		background-color: @other-toplist-table-tr-hover-bg;		
+	}
+}
+@table-td-progressbar-mleft: @other-toplist-table-alignleft-pleft;
+@table-td-progressbar-height: 5px;
+@table-td-progressbar-width: 60%;
+@table-td-progressbar-lheight: @other-toplist-table-tr-height;
+@table-td-progressbar-bg: ＃dcdcdc;
+.table-td-progressbar {
+	display: inline-block;
+	margin-left: @table-td-progressbar-mleft;
+	height: @table-td-progressbar-height;
+	width: @table-td-progressbar-width;
+	line-height: @table-td-progressbar-lheight;
+	//微调居中
+	vertical-align: 2px;
+	background-color: @table-td-progressbar-bg;
+}
+@progress-red-bg: #ec6e52;
+.progressbar-red {
+	height: 100%;
+	width: 80%;
+	background-color: @progress-red-bg;
+}
+@progress-blue-bg: #7ecaf0;
+.progressbar-blue {
+	height: 100%;
+	width: 50%;
+	background-color: @progress-blue-bg;
 }
