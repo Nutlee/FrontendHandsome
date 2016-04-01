@@ -533,7 +533,7 @@ body {
 @content-count-mtop: 20px;
 @content-count-height: 90px;
 @count-item-height: @content-count-height - @count-head-lheight;
-@count-item-width: 20.5%;
+@count-item-width: 20.4993%;
 @count-item-li-margin: 2.2511%;
 @count-item-bg: @content-breadcrumb-bg;
 @count-item-border: @content-search-border;
@@ -706,8 +706,7 @@ body {
 @first-groupe-detail-width: 39.4382%;
 @first-groupe-detail-lheight: 25px;
 @first-groupe-detail-height: @first-groupe-height;
-@groupe-detail-content-padding-bottom: 20px;
-@groupe-detail-content-padding: @groupe-detail-content-padding-bottom 40px;
+@groupe-detail-content-padding: 20px;
 @groupe-detail-head-tag-color: #c3c2c2;
 @groupe-detail-head-tag-mleft: 20px;
 .first-groupe-detail {
@@ -760,12 +759,15 @@ body {
 @groupe-detail-confirm-button-bg: #388ac1;
 .groupe-detail-confirm {
 	position: absolute;
-	bottom: @groupe-detail-content-padding-bottom;
+	right: @groupe-detail-content-padding;
+	bottom: @groupe-detail-content-padding;
+	left: @groupe-detail-content-padding;
 	border-top: @groupe-detail-price-border;
 	padding-top: 2px;
 	line-height: inherit;
 	color: @groupe-detail-head-tag-color;
 	button {
+		float: right;
 		margin-left: @groupe-detail-confirm-button-mright;
 		height: @groupe-detail-confirm-button-height;
 		width: @groupe-detail-confirm-button-width;
@@ -835,11 +837,10 @@ body {
 
 // 汽车行业品牌榜
 @other-toplist-width: 59.5505%;
-@other-toplist-min-width: 530px;
+// @other-toplist-min-width: 530px;
 .other-toplist {
 	float: right;
 	width: @other-toplist-width;
-	min-width: @other-toplist-min-width;
 	height: 100%;
 	// border: @first-groupe-table-border;
 	// .radius(@first-groupe-radius);
