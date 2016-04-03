@@ -1,0 +1,76 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+.css3-nthchild thead tr {
+	background-color: #000;
+	color: #fff;
+}
+.css3-nthchild tbody tr:nth-child(-n+3){
+	color: red;
+}
+.css3-nthchild tbody tr:nth-child(even) {
+	background-color: #ccc;
+}
+.css3-transition {
+	margin-top: 100px;
+	width: 200px;
+	border: 1px solid;
+	transition: width 2s;
+	-moz-transition: width 2s;	/* Firefox 4 */
+	-webkit-transition: width 2s;	/* Safari 和 Chrome */
+	-o-transition: width 2s;	/* Opera */
+}
+.css3-transition:focus {
+	width: 400px;
+}
+.banner {
+	position: relative;
+	width: 400px;
+	height: 200px;	
+	margin-top: 20px;
+	overflow: hidden;
+}
+.banner li{
+	position: absolute;
+	/*float: left;*/
+	list-style: none;
+	width: 400px;
+	height: 200px;
+}
+@keyframes scroll {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.banner li:target {
+	z-index: 1;
+	animation: scroll 500ms linear;
+}
+#banner-green {
+	background-color: green;
+}
+#banner-red {
+	background-color: red;
+}
+#banner-blue {
+	background-color: blue;
+}
+.banner-button {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	z-index: 999;
+}
+.banner-button a {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 30px;
+	background-color: #ccc;
+	margin-right: 10px;
+	text-align: center;
+}
