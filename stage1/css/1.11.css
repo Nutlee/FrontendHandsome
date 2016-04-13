@@ -87,3 +87,17 @@ header h1 {
 	height: 2rem;
 	margin-top: .6rem;
 }
+.sub-columns {
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.sub-columns img {
+	width: 50%;
+}
+.sub-columns li {
+	display: inline-block;
+	width: 33.3333%;
+	text-align: center;
+}
+]
