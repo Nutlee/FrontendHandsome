@@ -57,16 +57,35 @@ var pageState = {
 function renderChart() {
   var chartObj=chartData[pageState.nowGraTime][pageState.nowSelectCity],
       chartKeyArray=Object.getOwnPropertyNames(chartObj),
-      itemWidth=1000/(chartKeyArray.length*2+1),
-      chartWrap=document.getElementById("aqi-chart-wrap");
+      chartWrap=document.getElementById("aqi-chart-wrap"),
+      itemWidth=chartWrap.clientWidth/(chartKeyArray.length*2+1),
+      colors=["#000000","#00CC00","#333300","#660000","#666600",
+              "#990000","#999900","#CCCC00","#666699","#339999"]
+      //假设最大值
+      maxAqi=500;
   chartWrap.innerHTML="";
-  console.log(chartKeyArray);
   for (var i = 0; i < chartKeyArray.length; i++) {
-    var a=i*itemWidth*2+itemWidth+"px;";
-    chartWrap.innerHTML+="<div style=\"position:absolute;left:"+a+"bottom:0;height:100px;background-color:red;width:"+itemWidth+"px\"></div>"  
+    var left=i*itemWidth*2+itemWidth,
+        itemHeight=chartObj[chartKeyArray[i]]/maxAqi*chartWrap.clientHeight,
+        itemNode= {
+          left: left,
+          height: itemHeight,
+          width: itemWidth,
+          backgroundColor: colors[Math.floor(Math.random() * 9)],
+          descDate: chartKeyArray[i],
+          descValue: chartObj[chartKeyArray[i]]
+        }
+        chartWrap.innerHTML+=combineNode(itemNode);
   };
 }
-
+//拼装节点
+function combineNode(obj) {
+    // console.log(obj);
+    var descmLeft=(obj.width-72)/2,
+        descNode="<div class=\"desc\" style=\"margin-left:"+descmLeft+"px;z-index:999;\"><p>"+obj.descDate+"</p><p>AQI："+obj.descValue+"</p></div>";
+       return "<div class=\"aqi-item\" style=\"left:"+obj.left+"px;width:"+obj.width+"px;height:"+obj.height+"px;background-color:"+obj.backgroundColor+";\">"+descNode+"</div>";
+       // return "1";
+}
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
@@ -121,8 +140,21 @@ function initCitySelector() {
     var selList=document.getElementById("city-select");
     pageState.nowSelectCity=selList.getElementsByTagName("option")[0].innerHTML;
     selList.innerHTML=selListItem;
-    selList.onchange=citySelectChange;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
+    selList.onchange=citySelectChange;
+
+  // 监听鼠标移动到每一个柱时
+    var chartWrap=document.getElementById("aqi-chart-wrap");
+    EventUtil.addHandler(chartWrap,"mouseover",function(e){
+      if (e.target.className.indexOf("aqi-item")>-1) {
+          e.target.className+=" active";
+      }
+    });
+    EventUtil.addHandler(chartWrap,"mouseout",function(e){
+      if (e.target.className.indexOf("aqi-item")>-1) {
+          e.target.className = e.target.className.replace(/\sactive/, "");
+      }
+    });    
 
 }
 
