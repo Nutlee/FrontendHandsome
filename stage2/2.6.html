@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>任务十八：基础JavaScript练习（一）</title>
+	<title>任务十九：基础JavaScript练习（二）</title>
 	<style>
 		.wrap {
 			margin-top: 20px;
@@ -28,10 +28,14 @@
 	</div>
 	<script>
 		function createBlock(str) {
-			var redBlock=document.createElement("div");
-			redBlock.className="redblock";
-			redBlock.innerHTML=str;
-			return redBlock;
+			var redBlock=document.createElement("div"),
+				rule= new RegExp("^[0-9]*$","g");
+			//正则验证数字合法
+			if (rule.test(str)) {
+				redBlock.className="redblock";
+				redBlock.innerHTML=str;
+				return redBlock;
+			}
 		}
 		var wrap= $("wrap");
 		$("leftenter").onclick= function () {
