@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十：基础JavaScript练习（三）</title>
+	<style>
+		.wrap {
+			margin-top: 20px;
+		}
+		.wrap div {
+			padding: 5px;
+			margin: 0 5px;
+			float: left;
+			background-color: #ccc;
+		}
+		.wrap div span {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<textarea name="" id="inputvalue" cols="30" rows="10"></textarea>
+		<input type="button" value="左侧入" id="leftenter" />
+		<input type="button" value="右侧入" id="rightenter" />
+		<input type="button" value="左侧出" id="leftout" />
+		<input type="button" value="右侧出" id="rightout" />
+		<input type="button" value="查询" id="querybtn" />
+		<input type="text" id="querytext" />
+	</form>
+	<div class="wrap" id="wrap">
+
+	</div>
+	<script>
+		function createBlock(str) {
+			var textArray=[], blockHtml="";
+			//按 任意空白符 换行符 回车符 半角全角逗号 顿号 分割数组
+			textArray=str.split(/[\s\n\r\,\，\、]+/);
+			for(var i = 0, len = textArray.length; i < len; i++){
+				if (textArray[i]) {
+					blockHtml+="<div>"+textArray[i]+"</div>";
+				};
+			}
+			return blockHtml;
+		}
+		var wrap= $("wrap");
+		//左插入
+		$("leftenter").onclick= function () {
+			var inputValue = $("inputvalue").value.trim();
+			if (inputValue != "") {
+				wrap.innerHTML=createBlock(inputValue)+wrap.innerHTML;
+			};
+		}
+		//右侧入
+		$("rightenter").onclick= function () {
+			var inputValue = $("inputvalue").value.trim();
+			if (inputValue != "") {
+				wrap.innerHTML+=createBlock(inputValue);
+			};
+		}
+		//左侧出
+		$("leftout").onclick=function() {
+			if (wrap.innerHTML != "") {
+				wrap.removeChild(wrap.firstChild);
+			}
+		}	
+		//右侧出	
+		$("rightout").onclick=function() {
+			if (wrap.innerHTML != "") {
+				wrap.removeChild(wrap.lastChild);
+			}
+		}
+		$("querybtn").onclick=function() {
+			var searchText= $("querytext").value.trim();
+			function getNowHighText() {
+				var hightSpan=wrap.getElementsByTagName("span");
+				return hightSpan.length>0? hightSpan[0].innerHTML : "";
+			} 
+			if ( (searchText != getNowHighText())) {
+				wrap.innerHTML=wrap.innerHTML.replace(/<span>|<\/span>/g,"");
+				if (searchText) {
+					var spanHtml="<span>"+searchText+"</span>";
+					var searchReg= new RegExp(searchText,"g");
+					wrap.innerHTML=wrap.innerHTML.replace(searchReg,spanHtml);
+				}
+			}
+		}
+		function $(id) {
+			return document.getElementById(id);
+		}
+	</script>
+</body>
+</html>
