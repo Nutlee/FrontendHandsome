@@ -8,12 +8,12 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
-		.tagarea {
+		.tagarea, .hobbyarea {
 			overflow: hidden;
 			margin-top: 10px;
 			margin-bottom: 10px;
 		}
-		.tagblock {
+		.tagblock, .hobbyarea div {
 			padding: 5px;
 			margin: 10px;
 			float: left;
@@ -33,14 +33,13 @@
 			</div>
 		</div>
 		<div class="wrap">
-			<textarea name="" id="inputvalue" cols="30" rows="10"></textarea>
-			<input type="button" value="确认兴趣爱好" id="hobbybtn" />
-			<div id="hobbyarea"></div>
+			<textarea name="" id="hobbyinput" cols="30" rows="10" placeholder="使用任意空白符、换行符、回车符、半角全角逗号、顿号分割数组"></textarea>
+			<input id="hobbybtn" type="button" value="确认兴趣爱好" />
+			<div id="hobbyarea" class="hobbyarea">
+
+			</div>
 		</div>
 	</form>
-	<div class="wrap" id="wrap">
-
-	</div>
 	<script type="text/javascript" src="js/2.9.js"></script>
 </body>
 </html>
