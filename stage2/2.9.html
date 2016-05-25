@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十一：基础JavaScript练习（四））</title>
+	<style>
+		.wrap {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.tagarea, .hobbyarea {
+			overflow: hidden;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.tagblock, .hobbyarea div {
+			padding: 5px;
+			margin: 10px;
+			float: left;
+			height: 30px;
+			line-height: 30px;
+			background-color: #51FFD0;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<div class="wrap">
+			<label for="taginput">Tag：</label>
+			<input type="text" id="taginput" />
+			<div id="tagarea" class="tagarea">
+			</div>
+		</div>
+		<div class="wrap">
+			<textarea name="" id="hobbyinput" cols="30" rows="10" placeholder="使用任意空白符、换行符、回车符、半角全角逗号、顿号分割数组"></textarea>
+			<input id="hobbybtn" type="button" value="确认兴趣爱好" />
+			<div id="hobbyarea" class="hobbyarea">
+
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript" src="js/2.9.js"></script>
+</body>
+</html>
