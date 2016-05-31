@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十二：JavaScript和树（一）</title>
+	<style>
+		div {
+			box-sizing: border-box;
+		}
+		.root {
+			width: 80%;
+			min-width: 800px;
+			height: 300px;
+			padding: 20px;
+			border: 1px solid;
+			margin: 0 auto;
+		}
+		.level {
+			width: 50%;
+			height: 100%;
+			padding: 20px;
+			border: 1px solid;
+			float: left;
+		}
+		.btnwrap {
+			padding: 20px;
+			text-align: center;
+		}
+		.btnwrap button{
+			margin: 0 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="root">
+		<div class="level">
+			<div class="level">
+				<div class="level"></div>
+				<div class="level"></div>
+			</div>			
+			<div class="level">
+				<div class="level"></div>
+				<div class="level"></div>
+			</div>
+		</div>		
+		<div class="level">
+			<div class="level">
+				<div class="level"></div>
+				<div class="level"></div>
+			</div>			
+			<div class="level">
+				<div class="level"></div>
+				<div class="level"></div>
+			</div>
+		</div>
+	</div>
+	<div class="btnwrap">
+		<button id="NLR">前序</button>
+		<button id="LNR">中序</button>
+		<button id="LRN">后序</button>
+	</div>
+</body>
+</html>
