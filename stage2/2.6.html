@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务十九：基础JavaScript练习（二）</title>
+	<style>
+		.wrap {
+			margin-top: 20px;
+		}
+		.redblock {
+			padding: 5px;
+			margin: 0 5px;
+			float: left;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="text" id="inputvalue" />
+		<input type="button" value="左侧入" id="leftenter" />
+		<input type="button" value="右侧入" id="rightenter" />
+		<input type="button" value="左侧出" id="leftout" />
+		<input type="button" value="右侧出" id="rightout" />
+	</form>
+	<div class="wrap" id="wrap">
+		<!-- <div class="redblock">1111</div> -->
+	</div>
+	<script>
+		function createBlock(str) {
+			var redBlock=document.createElement("div"),
+				rule= new RegExp("^[0-9]*$","g");
+			//正则验证数字合法
+			if (rule.test(str)) {
+				redBlock.className="redblock";
+				redBlock.innerHTML=str;
+				return redBlock;
+			}
+		}
+		var wrap= $("wrap");
+		$("leftenter").onclick= function () {
+			wrap.insertBefore(createBlock($("inputvalue").value), wrap.firstChild);
+		}
+		$("rightenter").onclick= function () {
+			wrap.appendChild(createBlock($("inputvalue").value));
+		}
+		$("leftout").onclick=function() {
+			if (wrap.innerHTML != "") {
+				wrap.removeChild(wrap.firstChild);
+			}
+		}		
+		$("rightout").onclick=function() {
+			if (wrap.innerHTML != "") {
+				wrap.removeChild(wrap.lastChild);
+			}
+		}
+		function $(id) {
+			return document.getElementById(id);
+		}
+		// console.log(document.getElementsByTagName("p")[0].childNodes[0].nodeValue)
+	</script>
+</body>
+</html>
