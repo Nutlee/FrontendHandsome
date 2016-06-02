@@ -7,6 +7,9 @@
 		div {
 			box-sizing: border-box;
 		}
+		.root, .level {
+			background-color: white;
+		}
 		.root {
 			width: 80%;
 			min-width: 800px;
@@ -29,10 +32,13 @@
 		.btnwrap button{
 			margin: 0 20px;
 		}
+		.focus {
+			background-color: red;
+		}
 	</style>
 </head>
 <body>
-	<div class="root">
+	<div class="root" id="root">
 		<div class="level">
 			<div class="level">
 				<div class="level"></div>
@@ -55,9 +61,12 @@
 		</div>
 	</div>
 	<div class="btnwrap">
-		<button id="NLR">前序</button>
-		<button id="LNR">中序</button>
-		<button id="LRN">后序</button>
+		<input type="radio" name="method" value="0" checked>递归</input>
+		<input type="radio" name="method" value="1">非递归</input>
+		<button id="NLRbtn">前序</button>
+		<button id="LNRbtn">中序</button>
+		<button id="LRNbtn">后序</button>
 	</div>
+	<script type="text/javascript" src="js/2.10.js"></script>
 </body>
 </html>
