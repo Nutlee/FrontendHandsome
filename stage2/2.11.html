@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十二：JavaScript和树（一）</title>
+	<style>
+		div {
+			box-sizing: border-box;
+		}
+		.root, .level {
+			background-color: white;
+		}
+		.root {
+			width: 100%;
+			min-width: 800px;
+			/*height: 300px;*/
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.level {
+			height: 100%;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid;
+			float: left;
+		}
+		.btnwrap {
+			padding: 20px;
+			text-align: center;
+		}
+		.btnwrap button{
+			margin: 0 20px;
+		}
+		.focus {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="root" id="root">Super
+		<div class="level">Cat
+			<div class="level">Apple
+				<div class="level">Pear</div>
+				<div class="level">Pig</div>
+				<div class="level">Cola</div>
+				<div class="level">Soccer</div>
+			</div>	
+			<dic class="level">Phone</dic>		
+			<div class="level">Cat
+				<div class="level">Book</div>
+				<div class="level">School</div>
+			</div>
+		</div>		
+		<div class="level">Fish</div>
+		<div class="level">Node
+			<div class="level">Code
+				<div class="level">Operate</div>
+				<div class="level">Man</div>
+				<div class="level">Cola</div>
+			</div>	
+			<div class="level">Program
+				<div class="level">Bement
+					<div class="level">Cat</div>
+				</div>
+				<div class="level">Glass</div>
+			</div>
+		</div>	
+	</div>
+	<div class="btnwrap">
+		<input id="tr-radio"name="actType" type="radio" checked value="0">遍历</input>
+		<input id="search-radio" name="actType" type="radio" value="1">搜索</input>
+		<select value="">
+			<option name="trMethod" id="" selected>深度优先</option>
+			<option name="trMethod" id="">广度优先</option>
+		</select>
+		<input id="searchKey" type="text"/>
+		<button id="act">开始</button>
+	</div>
+	<script type="text/javascript" src="js/EventUtil.js"></script>
+	<script type="text/javascript">
+	var searchRadio=document.getElementById("search-radio"),
+		trRadio=document.getElementById("tr-radio"),
+		searchKeyInput=document.getElementById("searchKey");
+	EventUtil.addHandler(searchRadio,"change",function(event){
+		var event=EventUtil.getEvent(event);
+		if (event.target.checked) {
+			diabledInput(true);
+		} else {
+			diabledInput(false);
+		}
+	})		
+	function diabledInput(isDisabled){
+		searchKeyInput.disabled=isDisabled;
+	}
+	EventUtil.addHandler(trRadio,"click",function(event){
+		diabledInput(false);
+	})
+	</script>
+</body>
+</html>
