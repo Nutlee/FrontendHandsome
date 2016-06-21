@@ -72,32 +72,14 @@
 	<div class="btnwrap">
 		<input id="tr-radio"name="actType" type="radio" checked value="0">遍历</input>
 		<input id="search-radio" name="actType" type="radio" value="1">搜索</input>
-		<select value="">
-			<option name="trMethod" id="" selected>深度优先</option>
-			<option name="trMethod" id="">广度优先</option>
+		<select id="firsttype">
+			<option name="trMethod" value="0" selected>深度优先</option>
+			<option name="trMethod" value="1">广度优先</option>
 		</select>
 		<input id="searchKey" type="text"/>
 		<button id="act">开始</button>
 	</div>
 	<script type="text/javascript" src="js/EventUtil.js"></script>
-	<script type="text/javascript">
-	var searchRadio=document.getElementById("search-radio"),
-		trRadio=document.getElementById("tr-radio"),
-		searchKeyInput=document.getElementById("searchKey");
-	EventUtil.addHandler(searchRadio,"change",function(event){
-		var event=EventUtil.getEvent(event);
-		if (event.target.checked) {
-			diabledInput(true);
-		} else {
-			diabledInput(false);
-		}
-	})		
-	function diabledInput(isDisabled){
-		searchKeyInput.disabled=isDisabled;
-	}
-	EventUtil.addHandler(trRadio,"click",function(event){
-		diabledInput(false);
-	})
-	</script>
+	<script type="text/javascript" src="js/2.11.js"></script>
 </body>
 </html>

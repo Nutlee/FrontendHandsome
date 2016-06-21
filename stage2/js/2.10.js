@@ -191,25 +191,25 @@ var postOrder0 = function (node) {
  * @param  {[type]} node [description]
  * @return {[type]}      [description]
  */
-// var postOrder1 = function (node) {
-// 	if (!node) {
-// 	    throw new Error('Empty Tree');
-// 	}
-// 	var stack = [];
-// 	stack.push(node);
-// 	var tmp = null;
-// 	while (stack.length !== 0) {
-// 	    tmp = stack[stack.length - 1]
-// 	    if (tmp.children[0] && node !== tmp.children[0] && node !== tmp.children[1]) {
-// 	        stack.push(tmp.children[0]);
-// 	    } else if (tmp.children[1] && node !== tmp.children[1]) {
-// 	        stack.push(tmp.children[1]);
-// 	    } else {
-// 	        focusNodeList.push(stack.pop());
-// 	        node = tmp;
-// 	    }
-// 	}
-// }
+var postOrder1 = function (node) {
+	if (!node) {
+	    throw new Error('Empty Tree');
+	}
+	var stack = [];
+	stack.push(node);
+	var tmp = null;
+	while (stack.length !== 0) {
+	    tmp = stack[stack.length - 1]
+	    if (tmp.children[0] && node !== tmp.children[0] && node !== tmp.children[1]) {
+	        stack.push(tmp.children[0]);
+	    } else if (tmp.children[1] && node !== tmp.children[1]) {
+	        stack.push(tmp.children[1]);
+	    } else {
+	        focusNodeList.push(stack.pop());
+	        node = tmp;
+	    }
+	}
+}
 /**
  * 后序 非递归 使用两个栈
  * @param  {[type]} node [description]
