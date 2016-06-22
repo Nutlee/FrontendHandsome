@@ -29,3 +29,20 @@ var EventUtil = {
 		}
 	}
 };
+
+//id取dom
+function $(id) {
+	id=id.split("#")[1];
+	return document.getElementById(id);
+}
+// 重置定时器
+function resetTimer() {
+	for (var i = 0; i <timeId; i++) {
+		// console.log("清除了",hightTimer);
+		clearTimeout(timeId);
+	};
+}
+function removeClass(dom,cls) {
+	var regTxt='(^|\\s)'+cls+'(\\s|$)';
+	dom.className = dom.className.replace((new RegExp(regTxt)),"");
+}

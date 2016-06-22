@@ -2,13 +2,14 @@
 <html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
-	<title>任务二十二：JavaScript和树（一）</title>
+	<title>任务二十三：JavaScript和树（二）</title>
 	<style>
 		div {
 			box-sizing: border-box;
 		}
 		.root, .level {
 			background-color: white;
+			color: black;
 		}
 		.root {
 			width: 100%;
@@ -35,7 +36,11 @@
 			margin: 0 20px;
 		}
 		.focus {
-			background-color: red;
+			background-color: blue;
+			color: white;
+		}
+		.search-focus.focus {
+			background-color: purple;
 		}
 	</style>
 </head>
@@ -70,14 +75,16 @@
 		</div>	
 	</div>
 	<div class="btnwrap">
+		<label>非递归</label>
 		<input id="tr-radio"name="actType" type="radio" checked value="0">遍历</input>
 		<input id="search-radio" name="actType" type="radio" value="1">搜索</input>
 		<select id="firsttype">
 			<option name="trMethod" value="0" selected>深度优先</option>
 			<option name="trMethod" value="1">广度优先</option>
 		</select>
-		<input id="searchKey" type="text"/>
+		<input id="searchkey" type="text"/>
 		<button id="act">开始</button>
+		<button id="stopAct">停止动画</button>
 	</div>
 	<script type="text/javascript" src="js/EventUtil.js"></script>
 	<script type="text/javascript" src="js/2.11.js"></script>
