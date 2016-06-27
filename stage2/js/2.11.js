@@ -1,6 +1,5 @@
 // 因为非递归效率高，所以无论搜索还是遍历都只做了非递归。
 
-
 var searchRadio=$("#search-radio"),
 	trRadio=$("#tr-radio"),
 	searchKeyInput=$("#searchkey");
