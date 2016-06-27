@@ -42,7 +42,22 @@ function resetTimer() {
 		clearTimeout(timeId);
 	};
 }
+//移除className
 function removeClass(dom,cls) {
 	var regTxt='(^|\\s)'+cls+'(\\s|$)';
 	dom.className = dom.className.replace((new RegExp(regTxt)),"");
 }
+// 根据className取dom
+function getElementsByClassName(className) {
+	var doms=document.getElementsByTagName("*"),
+		classNamesDom=[],
+		classReg= new RegExp('(^|\\s)'+className+'(\\s|$)');
+	for (var i = doms.length - 1; i >= 0; i--) {
+		var dom = doms[i];
+		if (classReg.test(dom.className)) {
+			classNamesDom.push(dom);
+		};
+	};
+	return classNamesDom;
+}
+// 

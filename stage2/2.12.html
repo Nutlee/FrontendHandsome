@@ -2,7 +2,7 @@
 <html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
-	<title>任务二十三：JavaScript和树（二）</title>
+	<title>任务二十四：JavaScript和树（三）</title>
 	<style>
 		div {
 			box-sizing: border-box;
@@ -28,6 +28,9 @@
 			border: 1px solid;
 			float: left;
 		}
+		.level:hover {
+			cursor: pointer;
+		}
 		.btnwrap {
 			padding: 20px;
 			text-align: center;
@@ -41,6 +44,12 @@
 		}
 		.search-focus.focus {
 			background-color: purple;
+		}
+		#inputnode {
+			width: 200px;
+		}
+		.selected {
+			background: yellow; 
 		}
 	</style>
 </head>
@@ -86,7 +95,14 @@
 		<button id="act">开始</button>
 		<button id="stopAct">停止动画</button>
 	</div>
+	<div class="btnwrap">
+		<button id="delnode">删除节点</button>
+		<input id="inputnode" type="text" placeholder="请选中节点后，输入增加的节点名"/>
+		<button id="addnode">增加节点</button>
+		<p>注意，不能对根节点增删！</p>
+	</div>
 	<script type="text/javascript" src="js/EventUtil.js"></script>
 	<script type="text/javascript" src="js/2.11.js"></script>
+	<script type="text/javascript" src="js/2.12.js"></script>
 </body>
 </html>
