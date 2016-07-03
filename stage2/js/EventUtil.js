@@ -27,6 +27,13 @@ var EventUtil = {
 		} else {
 			event.returnValue = false;
 		}
+	},
+	stopPropagation: function(event) {
+		if (event.stopPropagation) {
+			event.stopPropagation();
+		} else {
+			event.cancelBubble = true;
+		};
 	}
 };
 
@@ -49,6 +56,9 @@ function removeClass(dom,cls) {
 }
 // 根据className取dom
 function getElementsByClassName(className) {
+	if (document.querySelectorAll) {
+		return document.querySelectorAll('.'+className);
+	};
 	var doms=document.getElementsByTagName("*"),
 		classNamesDom=[],
 		classReg= new RegExp('(^|\\s)'+className+'(\\s|$)');
@@ -60,4 +70,16 @@ function getElementsByClassName(className) {
 	};
 	return classNamesDom;
 }
-// 
+// 判断是否已经有className
+function elementHasClassName(ele,className) {
+	var classReg= new RegExp('(^|\\s)'+className+'(\\s|$)');
+	return classReg.test(ele.className);
+}
+//dom 增加class
+function addClass(ele,className) {
+	if (elementHasClassName(ele,className)) {
+		return;
+	} else {
+		ele.className += ' '+className
+	}
+}
