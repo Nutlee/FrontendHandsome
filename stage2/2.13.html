@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十五：JavaScript和树（四）</title>
+	<style type="text/css">
+		fieldset {
+			width: 500px;
+			margin: 0 auto;
+		}
+		ul {
+			line-height: 30px;
+			list-style: none;
+		}
+		ul li:hover {
+			color: blue;
+			cursor: pointer;
+		}
+		ul li:hover ul {
+			color: initial;
+			cursor: initial;
+		}
+		.show {
+			display: block;
+		}
+		.hide {
+			display: none;
+		}
+		.focus {
+			background: #ccc;
+		}
+		.focus ul {
+			background: white;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend>treeList</legend>
+		<div id="operate">
+			<input id="newnodevalue" type="text" value="" />
+			<button id="addnode">增加</button>
+			<button id="delnode">删除节点</button>
+		</div>
+		<p></p>
+		<ul class="show">
+			<li id="root" class="root">root
+				<ul class="hide">
+					<li>level0
+						<ul class="hide">
+							<li>level00</li>
+							<li>level01</li>
+							<li>level02</li>
+						</ul class="hide">
+					</li>
+					<li>level1
+						<ul class="hide">
+							<li>level10</li>
+							<li>level11</li>
+							<li>level12</li>
+						</ul class="hide">
+					</li>
+					<li>level2
+						<ul class="hide">
+							<li>level20</li>
+							<li>level21</li>
+							<li>level22</li>
+						</ul class="hide">
+					</li>
+				</ul class="hide">
+			</li>
+		</ul>
+	</fieldset>
+	<script type="text/javascript" src="js/EventUtil.js"></script>
+	<script type="text/javascript" src="js/2.13.js"></script>	
+</body>
+</html>
