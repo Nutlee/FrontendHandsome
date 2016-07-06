@@ -67,6 +67,7 @@ header h1 {
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	border-bottom: 1px solid #ddd;
+	text-align: center;
 }
 .label-list li{
 	display: inline-block;
