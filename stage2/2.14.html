@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十六：行星与飞船（一）</title>
+	<style type="text/css">
+		html {
+			height: 100%;
+		}
+		body {
+			min-width: 1000px;
+			width: 100%;
+			height: 100%;
+			padding: 10px;
+			margin: 0;
+		}
+		fieldset {
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.console {
+			width: 30%;
+			height: 100%;
+			/*margin: 20px;*/
+			float: left;
+		}
+		.main {
+			float: right;
+			width: 70%;
+		}
+		.container {
+			position: relative;
+			height: 700px;
+			margin-left: 10px;
+			border: 1px solid;
+			box-sizing: border-box;
+		}
+		.container > div {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 500px;
+			height: 500px;
+			margin: auto;
+			border-radius: 250px;
+			border: 1px solid;
+		}
+		.operate {
+			margin-left: 5px;
+		}
+		.operate-row {
+			padding: 10px;
+		}
+		.operate-row button {
+			width: 80px;
+			margin: 0 15px;
+			color: #aaa;
+		}
+		.operate-row button:hover {
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<fieldset class="console">
+		<legend>console</legend>
+	</fieldset>
+	<div class="main">
+		<div class="container">
+			<div></div>
+		</div>
+		<fieldset class="operate">
+			<legend>operate</legend>
+			<div class="operate-row">
+				<label for="">spaceship1</label><button>launch</button><button>start</button><button>pause</button><button>destory</button>
+			</div>			
+			<div class="operate-row">
+				<label for="">spaceship2</label><button>launch</button><button>start</button><button>pause</button><button>destory</button>
+			</div>			
+			<div class="operate-row">
+				<label for="">spaceship3</label><button>launch</button><button>start</button><button>pause</button><button>destory</button>
+			</div>			
+			<div class="operate-row">
+				<label for="">spaceship4</label><button>launch</button><button>start</button><button>pause</button><button>destory</button>
+			</div>
+		</fieldset>
+	</div>
+</body>
+</html>
