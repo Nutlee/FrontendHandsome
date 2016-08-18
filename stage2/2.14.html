@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十六：行星与飞船（一）</title>
+	<style type="text/css">
+		html {
+			height: 100%;
+		}
+		body {
+			min-width: 1000px;
+			width: 100%;
+			height: 100%;
+			padding: 10px;
+			margin: 0;
+		}
+		fieldset {
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.console {
+			width: 30%;
+			height: 100%;
+			float: left;
+			background: #eee;
+			overflow-y: auto; 
+		}
+		.console > div {
+			margin: 10px 0;
+		}
+		.main {
+			float: right;
+			width: 70%;
+		}
+		.container {
+			position: relative;
+			height: 700px;
+			margin-left: 10px;
+			border: 1px solid;
+			box-sizing: border-box;
+		}
+		.container > div {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			border-radius: 300px;
+			border: 1px solid;
+		}
+		.operate {
+			margin-left: 5px;
+		}
+		.operate-row {
+			padding: 10px;
+		}
+		.operate-row button {
+			width: 80px;
+			margin: 0 15px;
+			color: #aaa;
+		}
+		.operate-row button:hover {
+			color: #000;
+		}
+		.orbit5 {
+			width: 600px;
+			height: 600px;
+		}
+		.orbit4 {
+			width: 480px;
+			height: 480px;
+		}		
+		.orbit3 {
+			width: 360px;
+			height: 360px;
+		}		
+		.orbit2 {
+			width: 240px;
+			height: 240px;
+		}		
+		.orbit1 {
+			width: 100px;
+			height: 100px;
+		}
+		.orbit1 > small {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 100px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+		}
+		canvas {
+			position: absolute;
+			z-index: 999;
+		}
+		#forcedraw {
+			width: auto;
+		}
+	</style>
+</head>
+<body>
+	<fieldset id="console" class="console">
+		<legend>console</legend>
+	</fieldset>
+	<div class="main">
+		<div id="container" class="container">
+			<div class="orbit1"><small>地球</small></div>
+			<div class="orbit2"></div>
+			<div class="orbit3"></div>
+			<div class="orbit4"></div>
+			<div class="orbit5"></div>
+			<canvas id="orbitcanvas"></canvas>
+		</div>
+		<fieldset id="operate" class="operate">
+			<legend>operate</legend>
+			<div class="operate-row">
+				<label for="">spaceship1</label><button name="launch">launch</button><button name="start">start</button><button name="pause">pause</button><button name="destory">destory</button>
+			</div>			
+			<div class="operate-row">
+				<label for="">spaceship2</label><button name="launch">launch</button><button name="start">start</button><button name="pause">pause</button><button name="destory">destory</button>
+			</div>			
+			<div class="operate-row">
+				<label for="">spaceship3</label><button name="launch">launch</button><button name="start">start</button><button name="pause">pause</button><button name="destory">destory</button>
+			</div>			
+			<div class="operate-row">
+				<label for="">spaceship4</label><button name="launch">launch</button><button name="start">start</button><button name="pause">pause</button><button name="destory">destory</button>
+			</div>			
+			<div class="operate-row">
+				<button id="forcedraw">强制绘制一次飞船</button>
+				<button id="clearconsole">清空日志</button>
+			</div>
+		</fieldset>
+	</div>
+	<script type="text/javascript" src="js/2.14.js"></script>
+</body>
+</html>
