@@ -10,16 +10,16 @@
 	var AIRCRAFT_POWERBAR_COLOR_BAD = "#fb0000"; //电量差状态颜色
 	var AIRCRAFT_POWERBAR_WIDTH = 5;  //电量条宽度
 
-
 	var FAILURE_RATE = 0.3; //消息发送失败率
 	
-	var PLANET_RADIUS = 120;
-	var ORBITSPACE = 60;
+	var PLANET_RADIUS = 120; // 地区半径
+	var ORBITSPACE = 60;	// 轨道间隔
 
 	var orbitPaint = document.getElementById('container'),
 		orbitPaintWidth = orbitPaint.clientWidth,
 		orbitPaintHeight = orbitPaint.clientHeight;
 	window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+	
 	/**
 	 * 打印指令
 	 * @param  {[type]} msg [description]
@@ -30,6 +30,11 @@
 		consoleEle.innerHTML += '<div>'+msg+'</div>';
 	};
 
+	/**
+	 * 传输信息类
+	 * @param {[type]} targetID [飞船id]
+	 * @param {[type]} cmd      [何种命令]
+	 */
 	function Message(targetID,cmd) {
 		this.id = targetID;
 		this.command = cmd;
